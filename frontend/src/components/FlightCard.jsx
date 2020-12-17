@@ -39,7 +39,7 @@ const FlightCard = ({ data }) => {
       <div className="flightCard__price">
         <hr />
         <span className="flightCard__price__title">Precio: </span>
-        <span>{data.price}</span>
+        <span>{`$${data.price}MX`}</span>
       </div>
     </div>
   );

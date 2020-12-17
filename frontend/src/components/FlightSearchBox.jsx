@@ -56,7 +56,7 @@ const FlightSearchBox = ({ noShadow }) => {
                 id="departure"
                 name="departure"
                 type="text"
-                placeholder="dd/mm/aa"
+                placeholder="YYYY-MM-DD"
                 onChange={handleChange}
               />
             </div>
@@ -64,7 +64,7 @@ const FlightSearchBox = ({ noShadow }) => {
             <div className="SearchBox__form__item">
               <label htmlFor="return">Fecha Regreso</label>
               <span className="material-icons">today</span>
-              <input id="return" type="text" placeholder="dd/mm/aa" />
+              <input id="return" type="text" placeholder="YYYY-MM-DD" />
             </div>
 
             <Link
