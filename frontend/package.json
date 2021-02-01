@@ -6,6 +6,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development --port 3000",
+    "server": "node ../backend/API/server.js",
+    "deploy": "npm run server && npm run build",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/ --fix"
   },
