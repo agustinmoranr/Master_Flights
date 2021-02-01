@@ -11,6 +11,8 @@ import CollapsibleMenu from '../components/CollapsibleMenu';
 import Footer from '../components/Footer';
 import './styles/FlightResults.sass';
 
+const API = 'https://sparrow-flights.herokuapp.com/api/v1/';
+
 const FlightResults = props => {
   const [status, setStatus] = useState('inactive');
   const { from, departure, destination } = props.location.state;
@@ -54,8 +56,8 @@ const FlightResults = props => {
   useEffect(() => {
     fetch(
       departure.length > 0
-        ? `http://localhost:3002/api/v1/flight?departure_date=${departure}&departure=${from}&arrival=${destination}`
-        : `http://localhost:3002/api/v1/flight?departure=${from}&arrival=${destination}`
+        ? `${API}flight?departure_date=${departure}&departure=${from}&arrival=${destination}`
+        : `${API}flight?departure=${from}&arrival=${destination}`
     )
       .then(response => response.json())
       .then(data =>
